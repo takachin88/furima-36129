@@ -29,7 +29,7 @@
 | price                 | integer    | null: false       |
 ### Association
 * belongs_to :item
-* has_one :buyers
+* has_one :buyer
 
 ## buyers テーブル
 
@@ -39,8 +39,8 @@
 | item               | references | foreign_key: true |
 ### Association
 * belongs_to :user
-* has_many :items
-* has_many :ships
+* belongs_to :item
+* has_one :ship
 
 ## ships テーブル
 
