@@ -28,7 +28,7 @@
 | days_to_ship_id       | integer    | null: false       |
 | price                 | integer    | null: false       |
 ### Association
-* belongs_to :item
+* belongs_to :user
 * has_one :buyer
 
 ## buyers テーブル
@@ -51,7 +51,7 @@
 | city               | string     | null: false       |
 | address            | string     | null: false       |
 | building_name      | string     |                   |
-| phone_number       | integer    | null: false       |
+| phone_number       | string     | null: false       |
 | buyer              | references | foreign_key: true |
 ### Association
 * belongs_to :buyer
