@@ -20,10 +20,10 @@
 | --------------------  | ---------- | ----------------- |
 | user                  | references | foreign_key: true |
 | item_name             | string     | null: false       |
-| item_explanation      | text       | null: false       |
+| explanation           | text       | null: false       |
 | category_id           | integer    | null: false       |
 | item_status_id        | integer    | null: false       |
-| shipping_charges_id   | integer    | null: false       |
+| shipping_charge_id    | integer    | null: false       |
 | shipping_area_id      | integer    | null: false       |
 | days_to_ship_id       | integer    | null: false       |
 | price                 | integer    | null: false       |
