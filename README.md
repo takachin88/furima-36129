@@ -13,7 +13,6 @@
 ### Association
 * has_many :items
 * has_many :buyers
-* has_many :ships
 
 ## items テーブル
 
@@ -29,9 +28,8 @@
 | days_to_ship_id       | integer    | null: false       |
 | price                 | integer    | null: false       |
 ### Association
-* belongs_to :items
-* belongs_to :buyers
-* has_one :ships
+* belongs_to :item
+* has_one :buyers
 
 ## buyers テーブル
 
@@ -49,13 +47,11 @@
 | Colum              | Type       | Options           |
 | ------------------ | ---------  | ----------------- |
 | post_code          | string     | null: false       |
-| prefecture         | integer    | null: false       |
+| shipping_area_id   | integer    | null: false       |
 | city               | string     | null: false       |
 | address            | string     | null: false       |
-| building_name      | string     | string            |
+| building_name      | string     |                   |
 | phone_number       | integer    | null: false       |
 | buyer              | references | foreign_key: true |
 ### Association
-* belongs_to :ships
-* belongs_to :users
-* belongs_to :buyers
+* belongs_to :buyer
